@@ -14,6 +14,21 @@ The phylogenetic tree, also known as an evolutionary tree, is a branching diagra
 ![Phylogenetic-Tree-Construction](https://raw.githubusercontent.com/ngimhana/Phylogenetic_tree_construction/master/Diagram/phylogenetic-tree.png)
 
 
-## Methodology
+## **Methodology**  
 
-![Phylogenetic-Tree-Construction-methodology](https://raw.githubusercontent.com/ngimhana/Phylogenetic_tree_construction/master/Diagram/mehodology.png)
+### **1. Novel Alignment-Free Pairwise Distance Calculation**
+- **K-mers-Based Approach**:  
+  K-mers, which are fixed-length substrings of genetic sequences, are used to represent DNA sequences in a compressed form. This method avoids the computational burden of traditional sequence alignment by comparing k-mer frequencies or patterns directly.  
+- **Locality-Sensitive Hashing (LSH)**:  
+  LSH is employed to hash similar sequences into the same bucket with high probability. This drastically reduces the computational overhead by focusing only on relevant sequence comparisons, making the process faster and scalable for large datasets.  
+
+### **2. Machine Learning-Based Phylogenetic Tree Construction**
+- **Modified K-Medoids Clustering**:  
+  The genetic distances derived from the alignment-free methods are used as input for clustering. A modified version of the k-medoids algorithm is applied to group sequences based on their similarities, ensuring better performance and more accurate tree construction than traditional clustering methods.  
+- **Tree Assembly**:  
+  The clustering results are used to construct the phylogenetic tree, with each cluster forming a branch of the tree.  
+
+### **3. Numerical Neural Network for Tree Updation**
+- A numerical neural network is implemented to update the phylogenetic tree dynamically as new data becomes available. This ensures the tree remains accurate and reflective of the latest sequence data.  
+
+![Phylogenetic Tree Construction Methodology](https://raw.githubusercontent.com/ngimhana/Phylogenetic_tree_construction/master/Diagram/mehodology.png)  
